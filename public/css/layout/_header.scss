@@ -1,0 +1,44 @@
+header {
+    @include alignChildren (space-between, center);
+    flex-direction: column;
+    padding: 2rem 12rem;
+    height: 100vh;
+    nav{
+        @include alignChildren(center, space-between);
+        ul{
+            @include alignChildren(center, flex-start);
+            li{
+                @include alignChildren(center, flex-start);
+               
+              
+                    a{
+                    color: $color1;
+                    margin: 0 1rem;
+                    font-size: 1rem;
+                    font-family: $font2;
+                    position: relative;
+                    overflow: hidden;
+                    height: 60px;
+                    
+                            &::before {
+                                content: '';
+                                background-color: $color1;
+                                height: 2px;
+                                width: 100%;
+                                position: absolute;
+                                bottom: 10px;
+                                transition: 200ms ease-in-out;
+                            }
+            
+                            &::before {
+                                left: -100%;
+                            }
+            
+                            &:hover::before {
+                                left: 0;
+                            }
+                        }
+                    }
+            }
+        }
+}

@@ -1,0 +1,39 @@
+// Section herobanner
+header.padding-header{
+
+    .herobanner{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100vh;
+    align-items: center;
+    
+    
+    // Text presentation
+    .text-presentation{    
+        h1{
+            span {
+                font-family: $font1;
+                font-size: 3rem;
+            }
+        }
+        
+        h2{
+            margin: 2rem 0;
+        }
+        p{
+            margin: 1rem 0;
+        }
+        
+        .job {
+            @include alignChildren (center, flex-start);
+        }
+    }
+}
+.herobanner-img {
+    @include alignChildren (center, flex-end);
+    width: 100%;
+    img {
+        width: 70%;
+    }
+}
+}

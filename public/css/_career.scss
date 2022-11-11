@@ -1,0 +1,42 @@
+section{
+    .experiences{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+
+        li{
+            @include alignChildren (center, center);
+            margin-bottom: 2rem;
+
+            span{
+                font-family: $font4;
+                height: 100%;
+                width: 7%;
+                font-size: 1.5rem;
+                @include alignChildren (center, center);
+                min-width: 8rem;
+                padding: 1rem
+            }
+
+            div {
+                @include alignChildren (center, flex-start);
+                padding: 1.5rem 2rem;
+                width: 60%;
+                min-width: 40rem;
+                
+
+                h4 {
+                    margin-right: 2rem;
+                }
+
+                p{
+                    font-family: $font3;
+                }
+            }
+        }
+    }
+    a {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

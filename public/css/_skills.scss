@@ -1,0 +1,44 @@
+section{
+    .skills-informations{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        margin-bottom: 3rem;
+
+        .img-skills{
+            background-color: red;
+            height: 30rem;
+        }
+
+        .text-skills{
+            background-color: red;
+            height: 30rem;
+            grid-column: 2/4;
+        }
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        text-align: center;
+
+        div {
+            background-color: $color2;
+            h4 {
+                padding: 1.5rem;
+                border-bottom: 2px solid $color3;
+            }
+            ul{
+                padding: 1.5rem;
+                li{
+                    margin: 1rem;
+
+                    span{
+                        font-size: 1.2rem;
+                        font-family: $font2;
+                    }
+                }
+            }
+        }
+    }
+}

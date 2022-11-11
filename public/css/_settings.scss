@@ -1,0 +1,178 @@
+// -------------------Reset CSS
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+
+// -------------------Mixin
+// display flex ( align / space )
+@mixin alignChildren ($align, $space) {
+    display: flex;
+    align-items: $align;
+    justify-content: $space;
+}
+
+
+// -------------------Font
+// Montserrat
+@font-face {
+    font-family: "montserrat-regular";
+    src: url("/public/assets/font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-medium";
+    src: url("/public/assets/font/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-bold";
+    src: url("/public/assets/font/Montserrat-Bold.ttf");
+}
+
+// Orbitron
+@font-face {
+    font-family: "orbitron-bold";
+    src: url("/public/assets/font/Orbitron-Bold.ttf");
+}
+
+
+// Variable font
+$font1: montserrat-regular,
+sans-serif;
+$font2: montserrat-medium,
+sans-serif;
+$font3: montserrat-bold,
+sans-serif;
+$font4: orbitron-bold,
+sans-serif;
+
+
+// -------------------Color
+// Variable color
+$color1 : #FEFEFD;
+$color2 : #282A2C;
+// Border
+$color3 : #B7B7B7;
+$color4 : #4C4D4F;
+
+$color5 : #ED622B;
+
+
+// -------------------Container
+//Main
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+// Section
+// bg black
+.bg-black {
+    background-color: $color2;
+    color: $color1;
+}
+
+// bg white
+.bg-white {
+    background-color: $color1;
+    color: $color2;
+}
+
+// Padding section
+.padding-section {
+    padding: 6rem 12rem;
+}
+
+
+// -------------------Text
+// Title
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: $font4;
+}
+
+h1,
+h2 {
+    color: $color1;
+}
+
+h1 {
+    font-family: $font3;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: $font1;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+
+}
+
+// Paragraph
+p {
+    font-family: $font2;
+    line-height: 24px;
+}
+
+// Title section
+.title-section {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title-section h3,
+.title-section span {
+    font-family: $font4;
+    font-size: 4rem;
+}
+
+.title-section h3 {
+    margin: 1rem 0;
+}
+
+.title-section span {
+    color: $color5;
+}
+
+.title-section p {
+    text-transform: uppercase;
+    font-family: $font1;
+    font-size: 1.75rem;
+}
+
+// -------------------Other
+// Box shadow
+.box-shadow {
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 25%);
+}
+
+// Border
+.border-white {
+    border: 2px solid $color3;
+}
+
+.border-black {
+    border: 2px solid $color4;
+}
+
+.circle {
+    height: 1rem;
+    width: 1rem;
+    background-color: $color5;
+    border-radius: 100%;
+    margin-right: 2rem;
+}

@@ -1,0 +1,445 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("/public/assets/font/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("/public/assets/font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("/public/assets/font/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "orbitron-bold";
+  src: url("/public/assets/font/Orbitron-Bold.ttf");
+}
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.bg-black {
+  background-color: #282A2C;
+  color: #FEFEFD;
+}
+
+.bg-white {
+  background-color: #FEFEFD;
+  color: #282A2C;
+}
+
+.padding-section {
+  padding: 6rem 12rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: orbitron-bold, sans-serif;
+}
+
+h1,
+h2 {
+  color: #FEFEFD;
+}
+
+h1 {
+  font-family: montserrat-bold, sans-serif;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: montserrat-regular, sans-serif;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: montserrat-medium, sans-serif;
+  line-height: 24px;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title-section h3,
+.title-section span {
+  font-family: orbitron-bold, sans-serif;
+  font-size: 4rem;
+}
+
+.title-section h3 {
+  margin: 1rem 0;
+}
+
+.title-section span {
+  color: #ED622B;
+}
+
+.title-section p {
+  text-transform: uppercase;
+  font-family: montserrat-regular, sans-serif;
+  font-size: 1.75rem;
+}
+
+.box-shadow {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.border-white {
+  border: 2px solid #B7B7B7;
+}
+
+.border-black {
+  border: 2px solid #4C4D4F;
+}
+
+.circle {
+  height: 1rem;
+  width: 1rem;
+  background-color: #ED622B;
+  border-radius: 100%;
+  margin-right: 2rem;
+}
+
+header.padding-header .herobanner {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+  align-items: center;
+}
+header.padding-header .herobanner .text-presentation h1 span {
+  font-family: montserrat-regular, sans-serif;
+  font-size: 3rem;
+}
+header.padding-header .herobanner .text-presentation h2 {
+  margin: 2rem 0;
+}
+header.padding-header .herobanner .text-presentation p {
+  margin: 1rem 0;
+}
+header.padding-header .herobanner .text-presentation .job {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header.padding-header .herobanner-img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+header.padding-header .herobanner-img img {
+  width: 70%;
+}
+
+section .project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 6rem;
+  background-color: #FEFEFD;
+}
+section .project .presentation-project {
+  background-color: #FEFEFD;
+  border-right: 2px solid #4C4D4F;
+}
+section .project .presentation-project h4 {
+  padding: 1.5rem;
+  border-bottom: 2px solid #4C4D4F;
+}
+section .project .presentation-project .informations-project {
+  margin: 3rem 1.5rem;
+}
+section .project .presentation-project .informations-project .technologie span {
+  text-transform: uppercase;
+  font-family: orbitron-bold, sans-serif;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 2px solid #4C4D4F;
+  margin-right: 2rem;
+}
+section .project .presentation-project .informations-project p {
+  margin: 3rem 0;
+}
+section .project .presentation-project .informations-project .btn-project {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .project .presentation-project .informations-project .btn-project .rounded-btn {
+  position: absolute;
+  left: 25%;
+}
+section .project .img-project {
+  background-image: url(/public/assets/img/coffeeroasters.jpg);
+  width: 100%;
+  height: 30rem;
+}
+
+section .skills-informations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 3rem;
+}
+section .skills-informations .img-skills {
+  background-color: red;
+  height: 30rem;
+}
+section .skills-informations .text-skills {
+  background-color: red;
+  height: 30rem;
+  grid-column: 2/4;
+}
+section .skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  text-align: center;
+}
+section .skills div {
+  background-color: #282A2C;
+}
+section .skills div h4 {
+  padding: 1.5rem;
+  border-bottom: 2px solid #B7B7B7;
+}
+section .skills div ul {
+  padding: 1.5rem;
+}
+section .skills div ul li {
+  margin: 1rem;
+}
+section .skills div ul li span {
+  font-size: 1.2rem;
+  font-family: montserrat-medium, sans-serif;
+}
+
+section .experiences {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+}
+section .experiences li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+section .experiences li span {
+  font-family: orbitron-bold, sans-serif;
+  height: 100%;
+  width: 7%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  padding: 1rem;
+}
+section .experiences li div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 2rem;
+  width: 60%;
+  min-width: 40rem;
+}
+section .experiences li div h4 {
+  margin-right: 2rem;
+}
+section .experiences li div p {
+  font-family: montserrat-bold, sans-serif;
+}
+section a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 3rem 12rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+footer .credits p {
+  text-transform: uppercase;
+}
+footer div:nth-child(2n) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer div:nth-child(2n) a {
+  justify-self: stretch;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+}
+
+header {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 12rem;
+  height: 100vh;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header nav ul li a {
+  color: #FEFEFD;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-family: montserrat-medium, sans-serif;
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+}
+header nav ul li a::before {
+  content: "";
+  background-color: #FEFEFD;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  transition: 200ms ease-in-out;
+}
+header nav ul li a::before {
+  left: -100%;
+}
+header nav ul li a:hover::before {
+  left: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: orbitron-bold, sans-serif;
+  text-transform: uppercase;
+  color: #ED622B;
+  border-radius: 10px;
+  transition: 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rounded-btn {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+}
+.rounded-btn:hover {
+  color: #FEFEFD;
+  background-color: #ED622B;
+  transition: 300ms;
+}
+.rounded-btn i {
+  width: 100%;
+  height: 100%;
+  font-size: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 25px;
+  height: 3rem;
+}
+.btn:hover {
+  color: #FEFEFD;
+  background-color: #ED622B;
+  transition: 300ms;
+}
+.btn.btn-contact {
+  margin-top: 4rem;
+  font-size: 3rem;
+  padding: 3rem;
+}
+.btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.back-to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+}
+.back-to span {
+  font-family: montserrat-medium, sans-serif;
+  text-transform: uppercase;
+}
+.back-to a {
+  margin-left: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.back-to a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+  width: 2.8rem;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border: #FEFEFD 2px solid;
+  border-radius: 5px;
+  background-color: #282A2C;
+  color: #ED622B;
+  cursor: pointer;
+  transition: 300ms;
+}
+.back-to a i:hover {
+  background-color: #ED622B;
+  color: #FEFEFD;
+  transition: 300ms;
+}/*# sourceMappingURL=index.css.map */

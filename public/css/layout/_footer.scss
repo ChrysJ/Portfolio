@@ -1,0 +1,23 @@
+footer {
+    padding: 3rem 12rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    .credits{
+        p{
+            text-transform: uppercase;
+        }
+    }
+    
+    div:nth-child(2n){
+        @include alignChildren(center, center);
+        a {
+            justify-self: stretch;
+            width: fit-content;
+        }
+    }
+    .back-to-top{
+        @include alignChildren(center, center);
+        justify-self: end;
+    }
+}
