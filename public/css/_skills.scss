@@ -6,20 +6,22 @@ section {
         margin-bottom: 3rem;
 
         .img-skills {
-
             height: 100%;
             width: 100%;
 
             img {
-                width: 100%;
-
+                width: 140%;
             }
         }
 
         .text-skills {
             background-color: $color2;
-            height: 30rem;
+            padding: 2rem;
             grid-column: 2/4;
+
+            p{
+                margin: 1rem 0 2rem;
+            }
         }
     }
 
@@ -103,8 +105,6 @@ section {
             }
 
             .text-skills {
-
-                height: 30rem;
                 grid-column: 1/2;
             }
         }

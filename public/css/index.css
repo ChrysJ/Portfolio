@@ -54,7 +54,8 @@ main {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: orbitron-bold, sans-serif;
@@ -80,6 +81,10 @@ h2 {
 
 h4 {
   font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -356,12 +361,15 @@ section .skills-informations .img-skills {
   width: 100%;
 }
 section .skills-informations .img-skills img {
-  width: 100%;
+  width: 140%;
 }
 section .skills-informations .text-skills {
   background-color: #282A2C;
-  height: 30rem;
+  padding: 2rem;
   grid-column: 2/4;
+}
+section .skills-informations .text-skills p {
+  margin: 1rem 0 2rem;
 }
 section .skills {
   display: grid;
@@ -421,7 +429,6 @@ section .skills div ul li span {
     display: none;
   }
   section .skills-informations .text-skills {
-    height: 30rem;
     grid-column: 1/2;
   }
   section .skills {
