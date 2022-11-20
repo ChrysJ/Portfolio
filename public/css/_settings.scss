@@ -23,23 +23,23 @@
 // Montserrat
 @font-face {
     font-family: "montserrat-regular";
-    src: url("/public/assets/font/Montserrat-Regular.ttf");
+    src: url("../assets/font/montserrat-regular.ttf");
 }
 
 @font-face {
     font-family: "montserrat-medium";
-    src: url("/public/assets/font/Montserrat-Medium.ttf");
+    src: url("../assets/font/montserrat-medium.ttf");
 }
 
 @font-face {
     font-family: "montserrat-bold";
-    src: url("/public/assets/font/Montserrat-Bold.ttf");
+    src: url("../assets/font/montserrat-bold.ttf");
 }
 
 // Orbitron
 @font-face {
     font-family: "orbitron-bold";
-    src: url("/public/assets/font/Orbitron-Bold.ttf");
+    src: url("../assets/font/orbitron-bold.ttf");
 }
 
 
@@ -68,6 +68,10 @@ $color5 : #ED622B;
 // -------------------Container
 //Main
 main {
+    margin: 0 auto;
+}
+
+.wrapper {
     max-width: 1920px;
     margin: 0 auto;
 }
@@ -100,11 +104,13 @@ h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: $font4;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 25%);
 }
 
 h1,
 h2 {
     color: $color1;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 25%);
 }
 
 h1 {
@@ -115,15 +121,16 @@ h1 {
 h2 {
     font-family: $font1;
     font-size: 1.5rem;
+    font-weight: 100;
 }
 
 h4 {
     font-size: 2rem;
-
 }
 
 // Paragraph
 p {
+    font-size: 14px;
     font-family: $font2;
     line-height: 24px;
 }
@@ -136,6 +143,7 @@ p {
 
 .title-section h3,
 .title-section span {
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 25%);
     font-family: $font4;
     font-size: 4rem;
 }
@@ -160,6 +168,11 @@ p {
     box-shadow: 0 1px 4px 0 rgb(0 0 0 / 25%);
 }
 
+// Text shadow
+.text-shadow {
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 25%);
+}
+
 // Border
 .border-white {
     border: 2px solid $color3;
@@ -170,9 +183,101 @@ p {
 }
 
 .circle {
-    height: 1rem;
-    width: 1rem;
+    min-height: 1rem;
+    min-width: 1rem;
     background-color: $color5;
     border-radius: 100%;
     margin-right: 2rem;
+}
+
+// *********TABLETTE**********/
+
+@media screen and (max-width: 1300px) {
+
+    // Padding section
+    .padding-section {
+        padding: 6rem 4rem;
+    }
+
+    .title-section h3,
+    .title-section span {
+        font-size: 3.5rem;
+    }
+
+    .title-section p {
+        font-size: 1.4rem;
+    }
+}
+
+// *********MOBILE**********/
+
+@media screen and (max-width: 750px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+
+        font-size: 1.1rem;
+
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    // Padding section
+    .padding-section {
+        padding: 4rem 1.5rem;
+    }
+
+
+    .title-section h3,
+    .title-section span {
+        font-size: 2.2rem;
+    }
+
+    .title-section p {
+        font-size: 1.2rem;
+    }
+}
+
+// *********MOBILE**********/
+
+@media screen and (max-width: 500px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    // Padding section
+    .padding-section {
+        padding: 4rem 1.5rem;
+    }
+
+
+    .title-section h3,
+    .title-section span {
+        font-size: 2.2rem;
+    }
+
+    .title-section p {
+        font-size: 1.2rem;
+    }
+
+
+    .circle {
+        min-height: 0.8rem;
+        min-width: 0.8rem;
+        margin-right: 1.5rem;
+    }
 }

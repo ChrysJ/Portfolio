@@ -1,14 +1,14 @@
-section{
-    .experiences{
+section {
+    .experiences {
         display: grid;
         grid-template-columns: 1fr;
         margin-bottom: 2rem;
 
-        li{
+        li {
             @include alignChildren (center, center);
             margin-bottom: 2rem;
 
-            span{
+            span {
                 font-family: $font4;
                 height: 100%;
                 width: 7%;
@@ -21,22 +21,57 @@ section{
             div {
                 @include alignChildren (center, flex-start);
                 padding: 1.5rem 2rem;
-                width: 60%;
-                min-width: 40rem;
-                
+                width: 100%;
+                max-width: 50rem;
+
 
                 h4 {
                     margin-right: 2rem;
                 }
 
-                p{
+                p {
                     font-family: $font3;
                 }
             }
         }
     }
+
     a {
         width: fit-content;
         margin: 0 auto;
+    }
+}
+
+
+// *****************Mobile***************** // 
+@media screen and (max-width: 975px) {
+
+    section {
+        .experiences {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 2rem;
+
+            li {
+                @include alignChildren (center, center);
+                flex-direction: column;
+                margin-bottom: 1.5rem;
+
+                span {
+                    width: 100%;
+                    border-bottom: 0
+                }
+
+                div {
+                    @include alignChildren (flex-start, center);
+                    flex-direction: column;
+
+                    p {
+                        margin-top: 0.5rem;
+
+                    }
+                }
+            }
+        }
     }
 }

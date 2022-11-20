@@ -1,22 +1,29 @@
-section{
-    .skills-informations{
+section {
+    .skills-informations {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3rem;
         margin-bottom: 3rem;
 
-        .img-skills{
-            background-color: red;
-            height: 30rem;
+        .img-skills {
+
+            height: 100%;
+            width: 100%;
+
+            img {
+                width: 100%;
+
+            }
         }
 
-        .text-skills{
-            background-color: red;
+        .text-skills {
+            background-color: $color2;
             height: 30rem;
             grid-column: 2/4;
         }
     }
-    .skills{
+
+    .skills {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3rem;
@@ -24,21 +31,86 @@ section{
 
         div {
             background-color: $color2;
+
             h4 {
                 padding: 1.5rem;
                 border-bottom: 2px solid $color3;
             }
-            ul{
+
+            ul {
                 padding: 1.5rem;
-                li{
+
+                li {
                     margin: 1rem;
 
-                    span{
+                    a {
+                        font-size: 1.2rem;
+                        font-family: $font2;
+                        text-transform: capitalize;
+                        color: $color1;
+                        text-decoration: underline;
+                        text-underline-offset: 7px;
+
+                        &:hover {
+                            color: $color5;
+                        }
+                    }
+
+                    span {
                         font-size: 1.2rem;
                         font-family: $font2;
                     }
                 }
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1130px) {
+
+    section {
+        .skills-informations {
+            grid-gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            grid-gap: 1.5rem;
+
+            div {
+
+                ul {
+                    padding: 1rem;
+
+                    li {
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 935px) {
+    section {
+        .skills-informations {
+            grid-template-columns: 1fr;
+
+            .img-skills {
+                display: none;
+            }
+
+            .text-skills {
+
+                height: 30rem;
+                grid-column: 1/2;
+            }
+        }
+
+        .skills {
+            grid-template-columns: 1fr;
         }
     }
 }

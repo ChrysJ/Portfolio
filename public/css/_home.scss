@@ -1,39 +1,102 @@
 // Section herobanner
-header.padding-header{
+header.padding-header {
+    .herobanner {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        height: 100vh;
+        align-items: center;
 
-    .herobanner{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    height: 100vh;
-    align-items: center;
-    
-    
-    // Text presentation
-    .text-presentation{    
-        h1{
-            span {
-                font-family: $font1;
-                font-size: 3rem;
+        // Text presentation
+        .text-presentation {
+            h1 {
+                span {
+                    font-family: $font1;
+                    font-size: 3rem;
+                }
+            }
+
+            h2 {
+                margin: 2rem 0;
+            }
+
+            p {
+                margin: 1rem 0;
+            }
+
+            a {
+                margin-top: 3rem;
+                width: fit-content;
+            }
+
+            .job {
+                @include alignChildren(center, flex-start);
             }
         }
-        
-        h2{
-            margin: 2rem 0;
-        }
-        p{
-            margin: 1rem 0;
-        }
-        
-        .job {
-            @include alignChildren (center, flex-start);
+    }
+
+    .herobanner-img {
+        @include alignChildren(center, flex-end);
+        width: 100%;
+
+        img {
+            width: 70%;
         }
     }
 }
-.herobanner-img {
-    @include alignChildren (center, flex-end);
-    width: 100%;
-    img {
-        width: 70%;
+
+// *********TABLETTE**********/
+
+@media screen and (max-width: 1200px) {
+    header.padding-header {
+        .herobanner {
+            grid-template-columns: 1fr;
+
+            // Text presentation
+            .text-presentation {
+                h1 {
+                    span {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                h2 {
+                    margin: 2rem 0;
+                }
+            }
+        }
+
+        .herobanner-img {
+            display: none;
+        }
     }
 }
+
+// *********MOBILE**********/
+
+@media screen and (max-width: 700px) {
+
+    // Section herobanner
+    header.padding-header {
+        .herobanner {
+
+            // Text presentation
+            .text-presentation {
+                h1 {
+                    margin-bottom: 1.5rem;
+
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+
+                h2 {
+                    margin: 1rem 0;
+                }
+
+                a {
+                    margin: 2rem auto 0;
+                }
+            }
+        }
+    }
 }
