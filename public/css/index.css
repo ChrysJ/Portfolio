@@ -28,6 +28,10 @@ main {
   margin: 0 auto;
 }
 
+.body-overflow {
+  overflow-y: hidden;
+}
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -79,7 +83,7 @@ h4 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: montserrat-medium, sans-serif;
   line-height: 24px;
 }
@@ -281,7 +285,7 @@ section .project .presentation-project .description-project {
   flex-direction: column;
   height: calc(100% - 106px);
 }
-section .project .presentation-project .technologie span {
+section .project .presentation-project .description-project .technologie span {
   text-transform: uppercase;
   font-family: orbitron-bold, sans-serif;
   padding: 5px 15px;
@@ -289,14 +293,20 @@ section .project .presentation-project .technologie span {
   border: 2px solid #4C4D4F;
   margin-right: 2rem;
 }
-section .project .presentation-project .btn-project {
+section .project .presentation-project .description-project p {
+  margin: 2rem 0;
+}
+section .project .presentation-project .description-project p span {
+  font-weight: 900;
+}
+section .project .presentation-project .description-project .btn-project {
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section .project .presentation-project .btn-project .rounded-btn {
+section .project .presentation-project .description-project .btn-project .rounded-btn {
   position: absolute;
   left: -30%;
 }
@@ -330,6 +340,9 @@ section .project .img-project {
   }
   section .project .presentation-project .description-project {
     padding: 1.5rem;
+  }
+  section .project .presentation-project .description-project .technologie span {
+    margin-right: 1.2rem;
   }
 }
 section .skills-informations {
@@ -422,22 +435,22 @@ section .experiences {
 }
 section .experiences li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 2rem;
 }
-section .experiences li span {
+section .experiences li .date {
   font-family: orbitron-bold, sans-serif;
   height: 100%;
-  width: 7%;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 8rem;
+  height: 100%;
   padding: 1rem;
 }
-section .experiences li div {
+section .experiences li .accordion {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -445,10 +458,11 @@ section .experiences li div {
   width: 100%;
   max-width: 50rem;
 }
-section .experiences li div h4 {
+section .experiences li .accordion h4 {
   margin-right: 2rem;
 }
-section .experiences li div p {
+section .experiences li .accordion p {
+  font-size: 1rem;
   font-family: montserrat-bold, sans-serif;
 }
 section a {
@@ -471,17 +485,18 @@ section a {
     flex-direction: column;
     margin-bottom: 1.5rem;
   }
-  section .experiences li span {
+  section .experiences li .date {
     width: 100%;
     border-bottom: 0;
   }
-  section .experiences li div {
+  section .experiences li .accordion {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    max-width: none;
   }
-  section .experiences li div p {
+  section .experiences li .accordion p {
     margin-top: 0.5rem;
   }
 }
@@ -598,6 +613,9 @@ header nav ul li a.contact {
 header nav ul li a.contact::before {
   position: unset;
 }
+header nav .burger-menu {
+  display: none;
+}
 
 @media screen and (max-width: 1750px) {
   header {
@@ -606,14 +624,82 @@ header nav ul li a.contact::before {
 }
 @media screen and (max-width: 1200px) {
   header {
-    padding: 1rem 2rem;
+    height: 100vh;
+    padding: 2rem;
   }
-  header nav {
+  header .top-nav {
     padding-bottom: 1rem;
     border-bottom: 2px solid #B7B7B7;
+    position: fixed;
+    padding: 1rem 2rem;
+    left: 0;
+    top: 0;
+    background-color: #262525;
+    z-index: 5;
   }
-  header nav .nav-desktop {
-    display: none;
+  header .top-nav .nav {
+    position: fixed;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    background-color: #282A2C;
+    bottom: 0;
+    left: 0;
+    transform: translate(100%);
+    transition: 300ms;
+  }
+  header .top-nav .nav.open {
+    transform: translate(0);
+    transition: 300ms;
+  }
+  header .top-nav .nav li {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  header .top-nav .nav li a {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  header .top-nav .burger-menu {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    cursor: pointer;
+  }
+  header .top-nav .burger-menu #burger {
+    width: 1.5rem;
+    height: 2px;
+    background: #ED622B;
+    display: inline-block;
+    position: relative;
+  }
+  header .top-nav .burger-menu #burger::before, header .top-nav .burger-menu #burger::after {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: #ED622B;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+  header .top-nav .burger-menu #burger::before {
+    top: -8px;
+  }
+  header .top-nav .burger-menu #burger::after {
+    top: 8px;
+  }
+  header .top-nav .burger-menu #burger.open {
+    background: transparent;
+  }
+  header .top-nav .burger-menu #burger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header .top-nav .burger-menu #burger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
   }
   .bottom-nav {
     justify-content: flex-end;
@@ -726,6 +812,11 @@ a {
   transition: 300ms;
 }
 
+@media screen and (max-width: 1200px) {
+  .back-to {
+    display: none;
+  }
+}
 @media screen and (max-width: 875px) {
   a {
     font-size: 1rem;

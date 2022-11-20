@@ -71,6 +71,11 @@ main {
     margin: 0 auto;
 }
 
+// Body burger open
+.body-overflow{
+overflow-y: hidden;
+}
+
 .wrapper {
     max-width: 1920px;
     margin: 0 auto;
@@ -130,7 +135,7 @@ h4 {
 
 // Paragraph
 p {
-    font-size: 14px;
+    font-size: 16px;
     font-family: $font2;
     line-height: 24px;
 }

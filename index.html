@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrysopher Jouin | Developpeur front-end</title>
-    <meta name="descripion" content="portfolio / cv | développeur front-end">
+    <title>Chrysopher Jouin | Developpeur web et web mobile</title>
+    <meta name="descripion" content="portfolio / cv | développeur web et web mobile">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="./public/css/index.css">
+    <script defer src="./public/js/script.js"></script>
+    <script defer src="./public/js/experiences.js"></script>
 </head>
 
 <body>
-    <!-- nav  -->
+    <!-- Header -->
     <header id="header" class=" padding-header bg-black">
         <div class="wrapper">
-            <nav>
+
+            <!-- Nav -->
+            <nav class="top-nav">
                 <div class="logo">chrysj</div>
+
                 <!-- NavDesktop -->
-                <ul class="nav-desktop">
+                <ul class="nav">
                     <li>
                         <a href="#portfolio">Portfolio</a>
                         <a href="#skills">Compétences</a>
@@ -26,8 +31,14 @@
                         <a class="contact btn border-white" href="mailto:jouin.chrystopher@hotmail.com">Contact</a>
                     </li>
                 </ul>
-                <!-- NavMobile -->
+
+                <!-- Burger menu -->
+                <div class="burger-menu">
+                    <span id="burger"></span>
+                </div>
             </nav>
+
+
             <!-- herobanner-->
             <div class="herobanner">
                 <div class="text-presentation">
@@ -44,7 +55,6 @@
                         Je suis à la recherche d’une alternance, <br>
                         pour continuer à me former en préparant le diplôme de concepteur développeur d’applications.
                     </p>
-
                     <a class="box-shadow btn border-white" href="#portfolio">Découvrir mon travail <i
                             class="fa-solid fa-arrow-down"></i></a>
                 </div>
@@ -90,27 +100,101 @@
                 </div>
 
                 <!-- Project -->
-                <div class="project border-black box-shadow">
-                    <div class="presentation-project">
-                        <h4>CoffeeRoasters</h4>
-                        <div class="description-project">
-                            <div class="technologie">
-                                <span class="box-shadow">react</span>
-                                <span class="box-shadow">scss</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                            </p>
-                            <div class="btn-project">
-                                <a class="box-shadow rounded-btn  border-black" href=""><i
-                                        class="fa-brands fa-github"></i></a>
-                                <a class="box-shadow btn border-black" href="">voir le projet</a>
+                <ul>
+                    <li class="project border-black box-shadow">
+                        <div class="presentation-project">
+                            <h4>DiscoveryMagic</h4>
+                            <div class="description-project">
+                                <div class="technologie">
+                                    <span class="box-shadow">js</span>
+                                    <span class="box-shadow">php</span>
+                                    <span class="box-shadow">sql</span>
+                                </div>
+                                <p>
+                                    <span>Projet de fin de formation développeur web et web mobile.</span><br>
+                                    L'objectif de Discovery Magic est de répertorier les parcs des départements de
+                                    France.<br>
+                                    Afin d'aider l'utilisateur à trouver le prochain parc qu'il pourra visiter et lui
+                                    faire découvrir des parcs qu'il ne connaît pas encore.<br>
+                                    <span> Le projet est en cours mais vous pouvez consulter son avancement sur
+                                        Github.</span>
+                                </p>
+                                <div class="btn-project">
+                                    <a target="_blank" class="box-shadow btn border-black"
+                                        href="https://github.com/ChrysJ/DiscoveryMagic">voir le code</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="img-project"></div>
-                </div>
+                        <div class="img-project"></div>
+                    </li>
+                    <li class="project border-black box-shadow">
+                        <div class="presentation-project">
+                            <h4>CoffeeRoasters</h4>
+                            <div class="description-project">
+                                <div class="technologie">
+                                    <span class="box-shadow">react</span>
+                                    <span class="box-shadow">scss</span>
+                                </div>
+                                <p>
+                                    <span>Projet d'initiation à react</span><br>
+                                    Intégration d'un site vitrine en react à partir d'une maquette de <span>frontend
+                                        Mentor.io</span>.<br>
+                                    Le but principal de projet était de découvrir les différents hooks, les props, le
+                                    routeur et le JSX ainsi que son architecture et la manipulation de composant.
+                                </p>
+                                <div class="btn-project">
+                                    <a target="_blank" class="box-shadow btn border-black"
+                                        href="https://github.com/ChrysJ/Coffeeroasters">voir le code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-project"></div>
+                    </li>
+                    <li class="project border-black box-shadow">
+                        <div class="presentation-project">
+                            <h4>PiercingSpirit</h4>
+                            <div class="description-project">
+                                <div class="technologie">
+                                    <span class="box-shadow">Wordpress</span>
+                                </div>
+                                <p> <span>Projet de fin de formation web design et communication digitale.</span><br>
+                                    Durant ma formation de web design j'ai eu la chance de réaliser le site web de
+                                    PiercingSpirit qui est un shop de tatouage et piercing situé à Amiens.<br>
+                                    Lors de ce projet j'ai appris à travailler pour un client, la communication avec le
+                                    client et aussi
+                                    détectez ces attentes et ces besoins.
+                                </p>
+                                <div class="btn-project">
+                                    <a target="_blank" class="box-shadow btn border-black"
+                                        href="https://www.piercingspirit.com/">voir
+                                        le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-project"></div>
+                    </li>
+                    <li class="project border-black box-shadow">
+                        <div class="presentation-project">
+                            <h4>Country-App</h4>
+                            <div class="description-project">
+                                <div class="technologie">
+                                    <span class="box-shadow">js</span>
+                                    <span class="box-shadow">scss</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                                </p>
+                                <div class="btn-project">
+                                    <a class="box-shadow rounded-btn  border-black" href=""><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="box-shadow btn border-black" href="">voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-project"></div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -174,44 +258,10 @@
                     <p>de l'industrie au développement web</p>
                 </div>
                 <ul class="experiences">
-                    <li>
-                        <span class="border-black box-shadow">2022</span>
-                        <div class="border-black box-shadow">
-                            <h4>lamanu</h4>
-                            <p>- Formation développeur web et mobile</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="border-black box-shadow">2022</span>
-                        <div class="border-black box-shadow">
-                            <h4>udemy</h4>
-                            <p>- Formation auto didacte Scss / Javascript / React</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="border-black box-shadow">2021</span>
-                        <div class="border-black box-shadow">
-                            <h4>piercing spirit</h4>
-                            <p>- Stage web designer</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="border-black box-shadow">2021</span>
-                        <div class="border-black box-shadow">
-                            <h4>lamanu</h4>
-                            <p>- Formation web design et communication digitale</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="border-black  box-shadow">2019</span>
-                        <div class="border-black box-shadow">
-                            <h4>valeo</h4>
-                            <p>- Conducteur de machine industrielle</p>
-                        </div>
-                    </li>
+
                 </ul>
                 <a target="_blank" class="box-shadow btn border-black"
-                    href="/public/assets/img/cv_chrystopher-jouin.pdf">mon cv format
+                    href="./public/assets/img/cv_chrystopher-jouin.pdf">mon cv format
                     pdf <i class="fa-solid fa-download"></i></a>
             </div>
         </section>

@@ -20,27 +20,35 @@ section {
         @include alignChildren(flex-start, space-between);
         flex-direction: column;
         height: calc(100% - 106px);
-      }
 
-      .technologie {
-        span {
-          text-transform: uppercase;
-          font-family: $font4;
-          padding: 5px 15px;
-          border-radius: 20px;
-          border: 2px solid $color4;
-          margin-right: 2rem;
+
+        .technologie {
+          span {
+            text-transform: uppercase;
+            font-family: $font4;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 2px solid $color4;
+            margin-right: 2rem;
+          }
         }
-      }
 
-      .btn-project {
-        margin: 0 auto;
-        position: relative;
-        @include alignChildren(center, center);
+        p{
+          margin: 2rem 0;
+          span{
+            font-weight: 900;
+          }
+        }
 
-        .rounded-btn {
-          position: absolute;
-          left: -30%;
+        .btn-project {
+          margin: 0 auto;
+          position: relative;
+          @include alignChildren(center, center);
+
+          .rounded-btn {
+            position: absolute;
+            left: -30%;
+          }
         }
       }
     }
@@ -91,6 +99,12 @@ section {
 
         .description-project {
           padding: 1.5rem;
+
+          .technologie {
+            span {
+              margin-right: 1.2rem;
+            }
+          }
         }
       }
     }

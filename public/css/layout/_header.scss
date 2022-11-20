@@ -56,6 +56,10 @@ header {
                 }
             }
         }
+
+        .burger-menu {
+            display: none;
+        }
     }
 }
 
@@ -71,14 +75,93 @@ header {
 @media screen and (max-width: 1200px) {
 
     header {
-        padding: 1rem 2rem;
+        height: 100vh;
+        padding: 2rem;
 
-        nav {
+        .top-nav {
             padding-bottom: 1rem;
             border-bottom: 2px solid $color3;
+            position: fixed;
+            padding: 1rem 2rem;
+            left: 0;
+            top: 0;
+            background-color: #262525;
+            z-index: 5;
+            
 
-            .nav-desktop {
-                display: none;
+            .nav {
+                position: fixed;
+                height: calc(100vh - 64px);
+                width: 100vw;
+                background-color: $color2;
+                bottom: 0;
+                left: 0;
+                transform: translate(100%);
+                transition: 300ms;
+
+                &.open{
+                    transform: translate(0);
+                    transition: 300ms;
+                }
+
+                li {
+                    flex-direction: column;
+                    margin: 0 auto;
+
+                    a {
+                        margin: 1rem 0;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .burger-menu {
+                display: block;
+                @include alignChildren(center, center);
+                width: 2.5rem;
+                cursor: pointer;
+
+                #burger {
+                    width: 1.5rem;
+                    height: 2px;
+                    background: $color5;
+                    display: inline-block;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 2rem;
+                        height: 2px;
+                        background: $color5;
+                        display: inline-block;
+                        position: absolute;
+                        transform-origin: center;
+                        transition: all 0.3s ease;
+                    }
+
+                    &::before {
+                        top: -8px;
+                    }
+
+                    &::after {
+                        top: 8px;
+                    }
+
+                    &.open {
+                        background: transparent;
+                    }
+
+                    &.open::before {
+                        transform: rotate(45deg);
+                        top: 0;
+                    }
+
+                    &.open::after {
+                        transform: rotate(-45deg);
+                        top: 0;
+                    }
+                }
             }
         }
     }
