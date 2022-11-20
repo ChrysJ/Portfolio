@@ -408,31 +408,39 @@ section .skills div ul li span {
 
 @media screen and (max-width: 1130px) {
   section .skills-informations {
-    grid-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
     margin-bottom: 1.5rem;
+    transform: translateY(-5%);
+  }
+  section .skills-informations .img-skills {
+    height: 20rem;
+    width: 20rem;
+    transform: translateY(25%);
+  }
+  section .skills-informations .img-skills img {
+    width: 100%;
+  }
+  section .skills-informations .text-skills {
+    background-color: #282A2C;
+    padding: 2rem;
+    grid-column: 1/2;
+    z-index: 1;
+  }
+  section .skills-informations .text-skills p {
+    margin: 1rem 0 2rem;
   }
   section .skills {
     grid-gap: 1.5rem;
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
   }
   section .skills div ul {
     padding: 1rem;
   }
   section .skills div ul li {
     margin: 1rem 0;
-  }
-}
-@media screen and (max-width: 935px) {
-  section .skills-informations {
-    grid-template-columns: 1fr;
-  }
-  section .skills-informations .img-skills {
-    display: none;
-  }
-  section .skills-informations .text-skills {
-    grid-column: 1/2;
-  }
-  section .skills {
-    grid-template-columns: 1fr;
   }
 }
 section .experiences {
