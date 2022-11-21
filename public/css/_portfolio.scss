@@ -54,9 +54,23 @@ section {
     }
 
     .img-project {
-      background-image: url("../assets/img/coffeeroasters.jpg");
       width: 100%;
       height: 30rem;
+      object-fit: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+
+    }
+    &:nth-of-type(1)  .img-project {
+      background-image: url("../assets/img/discoverymagic.svg");
+    }
+    &:nth-of-type(2)  .img-project {
+      background-image: url("../assets/img/coffeeroasters.jpg");
+    }
+    &:nth-of-type(3)  .img-project {
+      background-image: url("../assets/img/piercingspirit.jpg");
+      background-position: center;
     }
   }
 }
